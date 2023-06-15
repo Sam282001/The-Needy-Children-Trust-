@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Needy Children Trust</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.1.1.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/kwiks.js"></script>
+    <script>
+        $(document).ready(function() {
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+            var owl = $("#owl");
+            owl.owlCarousel({
+                items: 4,
+                itemsDesktop: [995, 3],
+                itemsDesktopSmall: [767, 2],
+                itemsTablet: [700, 2],
+                itemsMobile: [479, 1],
+                navigation: true,
+            });
+        })
+        var Main = Main || {};
+        jQuery(window).load(function() {
+            window.responsiveFlag = jQuery('#responsiveFlag').css('display');
+            Main.gallery = new Gallery();
+            jQuery(window).resize(function() {
+                Main.gallery.update();
+            });
+        });
+
+        function Gallery() {
+            var self = this,
+                container = jQuery('.flexslider'),
+                clone = container.clone(false);
+            this.init = function() {
+                if (responsiveFlag == 'block') {
+                    var slides = container.find('.slides');
+                    slides.kwicks({
+                        max: 500,
+                        spacing: 0
+                    }).find('li > a').click(function() {
+                        return false;
+                    });
+                } else {
+                    container.flexslider();
+                }
+            }
+            this.update = function() {
+                var currentState = jQuery('#responsiveFlag').css('display');
+                if (responsiveFlag != currentState) {
+                    responsiveFlag = currentState;
+                    container.replaceWith(clone);
+                    container = clone;
+                    clone = container.clone(false);
+                    this.init();
+                }
+            }
+            this.init();
+        }
+    </script>
+    <!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+			</a>
+		</div>
+		<![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+</head>
+
+<body class="page1" id="top">
+    <!--==============================header=================================-->
+    <header>
+        <div class="clear"></div>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1>
+                    <a href="index.html">
+                        <img src="images/tsf_logo.png" alt="A Charity Organisation">
+                    </a>
+                    <div>
+                        <h3><strong>The Needy Children Trust</strong></h3>
+                    </div>
+                </h1>
+                <div class="menu_block">
+                    <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+                        <ul class="sf-menu">
+                            <li class="current"><a href="index.html">Home</a></li>
+                            <li><a href="#">Our Work</a></li>
+                            <li><a href="#">Volunteer </a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <!--==============================Content=================================-->
+
+        <div class="container_12">
+            <div class="grid_8">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="images/page1_img1.jpg" alt="">
+                            <div class="flex-caption">
+                                <p>Hope</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/page1_img2.jpg" alt="">
+                            <div class="flex-caption c2">
+                                <p>Save</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/page1_img3.jpg" alt="">
+                            <div class="flex-caption">
+                                <p>Help</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <span id="responsiveFlag"></span>
+            </div>
+            <div class="grid_4">
+                <p><strong style="font-family: Copperplate Gothic; font-size: 22px;">Supprt Our Cause By Donating
+						Today!</strong></p>
+                <form>
+                    <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_I6ollb3KaouXxx" async>
+                    </script>
+                </form>
+                <div class="text1"><strong>#ThinkForTheChildren</strong></div>
+                <p>We firmly believe that every child deserves the best chance for a bright future, which is why, we are fiercely committed to ensure that children not only survive, but thrive. With a bold ambition and a powerful vigilance, we do whatever
+                    it takes to save the children.</p>
+                We are proud to be the world’s leading expert on children, delivering lasting results to millions of vulnerable girls and boys. By saving our world’s children, we transform their lives and the future we share.
+            </div>
+            <div class="clear"></div>
+            <div class="grid_3">
+                <div class="block2 maxheight">
+                    <div class="title">our Mission</div>
+                    <div class="pad">
+                        To inspire breakthroughs in the way the world treats children, and to achieve immediate, and lasting change in their lives
+                        <div class="alright"><a href="#" class="btn">Read More</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_3">
+                <div class="block2 maxheight">
+                    <div class="title">Our Vision</div>
+                    <div class="pad">
+                        Build a world in which every child has the right to survival, protection, development, and participation
+                        <div class="alright"><a href="#" class="btn">Read More</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_3">
+                <div class="block2 maxheight">
+                    <div class="title">Our Partners</div>
+                    <div class="pad">
+                        We work alongside children, supporters, and partners like trusts, institutions, companies, who help us build a better world for the lesser-fortunate children.
+                        <div class="alright"><a href="#" class="btn">Read More</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_3">
+                <div class="block2 maxheight">
+                    <div class="title">Why Us</div>
+                    <div class="pad">Committed to our vision and working towards our mission, we ceaselessly work towards a better life for every child through all our undertakings.
+                        <div class="alright"><a href="#" class="btn">Read More</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="grid_12">
+                <h2>Yes, You can help Them!</h2>
+                <div id="owl">
+                    <div class="item">
+                        <a href="#"><img src="images/page1_img4.jpg" alt="">Jim <br> 8 years</a>
+                    </div>
+                    <div class="item it1">
+                        <a href="#"><img src="images/page1_img5.jpg" alt="">Kelly <br> 3 years</a>
+                    </div>
+                    <div class="item it2">
+                        <a href="#"><img src="images/page1_img6.jpg" alt="">Pam <br> 5 years</a>
+                    </div>
+                    <div class="item it3">
+                        <a href="#"><img src="images/page1_img7.jpg" alt="">Michael <br> 6 years</a>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="images/page1_img4.jpg" alt="">Jim <br> 8 years</a>
+                    </div>
+                    <div class="item it1">
+                        <a href="#"><img src="images/page1_img5.jpg" alt="">Kelly <br> 3 years</a>
+                    </div>
+                    <div class="item it2">
+                        <a href="#"><img src="images/page1_img6.jpg" alt="">Pam <br> 5 years</a>
+                    </div>
+                    <div class="item it3">
+                        <a href="#"><img src="images/page1_img7.jpg" alt="">Michael <br> 6 years</a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_4">
+                <h3 class="nowrap mb0">Our Campaigns </h3><br>
+                <p>
+                    Covering every aspect, these campaigns are focused on issues ranging from the implementation of child-friendly policies to rehabilitation efforts to creating general awareness about children’s circumstances.
+                </p>
+                <div class="alright"><a href="#" class="btn">Read More</a></div>
+            </div>
+            <div class="grid_7 prefix_1">
+                <h3>About Us</h3>
+                <img src="images/page1_img8.jpg" alt="" class="img_inner fleft">
+                <div class="extra_wrapper">
+                    <p>We at The Needy Needy Children Trust Aims to help the childrens To nurture and solve their issues so that they can have a bright future ahead! </p>
+                    Want To Know More About Team And Our Financial Aspects Click The Button Below.
+                </div>
+                <div class="clear"></div>
+                <div class="alright"><a href="#" class="btn">Read More</a></div>
+            </div>
+        </div>
+    </div>
+    <!--==============================footer=================================-->
+    <footer>
+        <div class="hor bg3"></div>
+        <div class="container_12">
+            <div class="grid_12 ">
+                <div class="socials">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <div class="clear"></div>
+                </div>
+                <div class="copy">
+                    <strong>The Needy Children Trust</strong> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a><br>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
